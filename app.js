@@ -20,6 +20,7 @@ const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb://shoppingtutorial:velmurugan143@ds247178.mlab.com:47178/shoppoingtutorial');
 mongoose.Promise = global.Promise;
+app.use('/uploads', express.static('uploads'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
